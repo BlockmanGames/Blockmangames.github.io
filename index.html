@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>gn-math redirects</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 150px);
+      grid-gap: 20px;
+    }
+
+    .button {
+      border: none;
+      width: 150px;
+      height: 150px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 20px;
+      transition: transform 0.2s, background-color 0.3s;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .yellow {
+      background-color: #fcd307;
+      color: #111;
+    }
+    .yellow:hover {
+      background-color: #ffea61;
+      transform: scale(1.1);
+    }
+
+    .gray {
+      background-color: #CBCBCB;
+      color: #111;
+    }
+    .gray:hover {
+      background-color: #e2e2e2;
+      transform: scale(1.1);
+    }
+
+    .darkgray {
+      background-color: #555555;
+      color: #fff;
+    }
+    .darkgray:hover {
+      background-color: #777777;
+      transform: scale(1.1);
+    }
+
+    .adofai {
+      background: linear-gradient(45deg, red, blue);
+      background-size: 200% 200%;
+      color: #fff;
+      animation: gradientShift 3s ease infinite;
+    }
+    .adofai:hover {
+      transform: scale(1.1);
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Footer link button */
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+    }
+    .footer a {
+      display: inline-block;
+      background-color: #CBCBCB;
+      color: #111;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .footer a:hover {
+      background-color: #e2e2e2;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <button class="button yellow" onclick="window.location.href='UTYellow.html'">
+      UNDERTALE<br>YELLOW
+    </button>
+  
+    <button class="button gray" onclick="window.location.href='UT.html'">
+      UNDERTALE
+    </button>
+
+    <button class="button darkgray" onclick="window.location.href='DR.html'">
+      DELTARUNE
+    </button>
+
+    <button class="button adofai" onclick="window.location.href='ADOFAI.html'">
+      ADOFAI
+    </button>
+  </div>
+
+  <div class="footer">
+    <a href="https://gn-math.github.io" target="_blank">
+      Decomps by Genizy
+    </a>
+  </div>
+</body>
+</html>
