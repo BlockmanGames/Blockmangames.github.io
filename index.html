@@ -1,135 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>game redirects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Redirects</title>
   <style>
     body {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       background-color: #111;
       font-family: Arial, sans-serif;
-      color: #fff;
+      gap: 20px;
     }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 150px);
-      grid-gap: 20px;
+      grid-template-rows: repeat(2, 150px);
+      gap: 20px;
     }
-
     .button {
-      border: none;
-      width: 150px;
-      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
       font-size: 18px;
       font-weight: bold;
-      cursor: pointer;
-      border-radius: 20px;
-      transition: transform 0.2s, background-color 0.3s;
+      color: white;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
     }
-
-    .yellow {
-      background-color: #fcd307;
-      color: #111;
+    .button:hover {
+      transform: scale(1.05);
     }
-    .yellow:hover {
-      background-color: #ffea61;
-      transform: scale(1.1);
-    }
-
-    .gray {
-      background-color: #CBCBCB;
-      color: #111;
-    }
-    .gray:hover {
-      background-color: #e2e2e2;
-      transform: scale(1.1);
-    }
-
-    .darkgray {
-      background-color: #555555;
-      color: #fff;
-    }
-    .darkgray:hover {
-      background-color: #777777;
-      transform: scale(1.1);
-    }
-
+    .yellow { background-color: #FFD300; color: black; }
+    .gray { background-color: #CBCBCB; color: black; }
+    .dark-gray { background-color: #333333; }
     .adofai {
-      background: linear-gradient(45deg, red, blue);
-      background-size: 200% 200%;
-      color: #fff;
-      animation: gradientShift 3s ease infinite;
-    }
-    .adofai:hover {
-      transform: scale(1.1);
+      background: linear-gradient(270deg, red, blue);
+      background-size: 400% 400%;
+      animation: gradientShift 4s ease infinite;
     }
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    /* Footer link button */
     .footer {
-      position: absolute;
-      bottom: 20px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
     }
-    .footer a {
-      display: inline-block;
-      background-color: #CBCBCB;
-      color: #111;
+    .footer .button {
+      background-color: #444;
       font-size: 14px;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: transform 0.2s, background-color 0.3s;
+      padding: 10px 20px;
+      border-radius: 15px;
     }
-    .footer a:hover {
-      background-color: #e2e2e2;
-      transform: scale(1.05);
+    .wide-button {
+      grid-column: span 2;
+      width: 320px;
+      height: 60px;
+      background-color: #666;
     }
   </style>
 </head>
 <body>
   <div class="grid">
-  <button class="button yellow" onclick="window.location.href='UTYellow/'">
-    UNDERTALE<br>YELLOW
-  </button>
-  
-  <button class="button gray" onclick="window.location.href='UT/'">
-    UNDERTALE
-  </button>
+    <a href="UTYellow/index.html" class="button yellow">UNDERTALE YELLOW</a>
+    <a href="UT/index.html" class="button gray">UNDERTALE</a>
+    <a href="DR/index.html" class="button dark-gray">DELTARUNE</a>
+    <a href="ADOFAI/index.html" class="button adofai">ADOFAI</a>
+  </div>
 
-  <button class="button darkgray" onclick="window.location.href='DR/'">
-    DELTARUNE
-  </button>
-
-  <button class="button adofai" onclick="window.location.href='ADOFAI/'">
-    ADOFAI
-  </button>
-</div>
-
+  <a href="misc/index.html" class="button wide-button">MORE GAMES</a>
 
   <div class="footer">
-    <a href="https://gn-math.github.io" target="_blank">
-      Decomps by Genizy
-    </a>
-	<a href="https://blockmangames.github.io/misc/MrSkeletal/" target="_blank">
-      Skeletal Shenanigans
-    </a>
+    <a href="https://gn-math.github.io" class="button">Decomps by Genizy</a>
   </div>
 </body>
 </html>
