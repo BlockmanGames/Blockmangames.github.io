@@ -22,4 +22,12 @@
         console.error('error:', error);
       }
     }
+    window.addEventListener("message", (event) => {
+  const { key, type } = event.data;
+  if (!key || !type) return;
+
+  // Create and dispatch real key event inside iframe
+  const ev = new KeyboardEvent(type, { key, code: key, bubbles: true });
+  document.dispatchEvent(ev);
+});
   </script>
