@@ -1,5 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <button onclick="exportSave()">Export Save</button>
+<script>
+function exportSave() {
+  try {
+    const iframe = document.querySelector("iframe").contentWindow;
+
+    // Grab localStorage inside iframe
+    const save = {};
+    for (let i = 0; i < iframe.localStorage.length; i++) {
+      const key = iframe.localStorage.key(i);
+      save[key] = iframe.localStorage.getItem(key);
+    }
+
+    // Download as JSON
+    const blob = new Blob([JSON.stringify(save, null, 2)], {type: "application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "save.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch (e) {
+    alert("Could not access iframe storage: " + e);
+  }
+}
+</script>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
